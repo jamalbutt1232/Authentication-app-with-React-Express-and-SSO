@@ -23,7 +23,6 @@ export default function LoginPage() {
     try {
       const response = await axios.post("/api/auth/login", { email, password });
       setMessage(response.data.message);
-      // Save user data to state or context if necessary
     } catch (error: any) {
       setMessage(error.response?.data?.message || "An error occurred");
     } finally {
@@ -32,7 +31,6 @@ export default function LoginPage() {
   };
 
   const handleGoogleSuccess = (response: any) => {
-    // Handle Google login response here
     console.log("Google Login Success:", response);
   };
 
